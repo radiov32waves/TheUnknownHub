@@ -14,6 +14,7 @@ local Tab = {
     Main = Window:MakeTab({Name = "Main",Icon = "rbxassetid://4483345998",PremiumOnly = false}),
     s1 = Window:MakeTab({Name = "Adoptme",Icon = "rbxassetid://4483345998",PremiumOnly = false}),
 	s2 = Window:MakeTab({Name = "Greenville",Icon = "rbxassetid://4483345998",PremiumOnly = false}),
+	s3 = Window:MakeTab({Name = "BloxFruit",Icon = "rbxassetid://4483345998",PremiumOnly = false}),
 
 }
 
@@ -71,7 +72,136 @@ loadstring(game:HttpGet("https://api.xnexus.cc/request/12d2fd60e7a67b48ece6f8fce
       		print("button pressed")
   	end    
 })
+-----------------------------------------bloxfruit---------------------------------------------
+local Section = Tab.s2:AddSection({
+	Name = "BloxFruit"
+})
 
+Tab.s3:AddParagraph("BloxFruit Scripts",":)")
+
+Tab.s3:AddButton({
+	Name = "Redz Hub Script",
+	Callback = function()
+		local Settings = {
+    JoinTeam = "Pirates"; -- Pirates / Marines
+    Translator = true;   -- true / false
+}
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/tlredz/Scripts/refs/heads/main/main.luau"))(Settings)
+      		print("button pressed")
+  	end    
+})
+
+Tab.s3:AddButton({
+	Name = "GravityHub Script",
+	Callback = function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/Dev-GravityHub/BloxFruit/refs/heads/main/Main.lua"))()
+      		print("button pressed")
+  	end    
+})
+
+Tab.s3:AddButton({
+	Name = "Kaitun Script",
+	Callback = function()
+		repeat wait() until game:IsLoaded() and game.Players.LocalPlayer
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Dev-GravityHub/BloxFruit/refs/heads/main/Kaitun.lua"))()
+      		print("button pressed")
+  	end    
+})
+
+Tab.s3:AddButton({
+	Name = "Find Fruit Script",
+	Callback = function()
+		getgenv().Team = "Marines"
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Dev-GravityHub/BloxFruit/refs/heads/main/FindFruit.lua"))()
+      		print("button pressed")
+  	end    
+})
+
+Tab.s3:AddButton({
+	Name = "Auto Bounty Script",
+	Callback = function()
+		repeat wait() until game:IsLoaded() and game.Players.LocalPlayer
+getgenv().Setting = {
+    ["Team"] = "Marines",
+    ["Skip Race V4"] = true,        
+    ["Melee"] = {
+        ["Name Weapon"] = "Godhuman",
+        ["Enable"] = true,
+        ["Z"] = {["Enable"] = true, ["HoldTime"] = 0.1},
+        ["X"] = {["Enable"] = true, ["HoldTime"] = 0.1},
+        ["C"] = {["Enable"] = true, ["HoldTime"] = 0.1},
+        ["Delay"] = 1.5
+    },       
+    ["Sword"] = {
+        ["Name Weapon"] = "Cursed Dual Katana",
+        ["Enable"] = true,
+        ["Z"] = {["Enable"] = true, ["HoldTime"] = 0.1},
+        ["X"] = {["Enable"] = true, ["HoldTime"] = 0.1},
+        ["Delay"] = 1
+    },        
+    ["Gun"] = {
+        ["Enable"] = true,
+        ["Z"] = {["Enable"] = true, ["HoldTime"] = 0.1},
+        ["X"] = {["Enable"] = true, ["HoldTime"] = 0.1},
+        ["Delay"] = 1,
+        ["GunMode"] = false
+    },        
+    ["Fruit"] = {
+        ["Enable"] = false,
+        ["Z"] = {["Enable"] = true, ["HoldTime"] = 0.1},
+        ["X"] = {["Enable"] = true, ["HoldTime"] = 0.1},
+        ["C"] = {["Enable"] = true, ["HoldTime"] = 0.1},
+        ["V"] = {["Enable"] = false, ["HoldTime"] = 0.1},
+        ["F"] = {["Enable"] = true, ["HoldTime"] = 0.1},
+        ["Delay"] = 1
+    },        
+    ["Hunt"] = {
+        ["Min"] = 0,
+        ["Max"] = 30000000
+    },       
+        ["Skip"] = {
+            ["Fruit"] = false,
+            ["FruitList"] = {"Buddha", "Leopard", "T-Rex"},
+            ["SafeZone"] = true,
+            ["NoHaki"] = true,
+            ["NoPvP"] = true
+        },        
+        ["SafeHealth"] = {
+            ["Health"] = 4700,
+            ["RaceV4"] = false
+        },        
+        ["Another"] = {
+            ["V3"] = true,
+            ["V4"] = true,
+            ["CustomHealth"] = true,
+            ["Health"] = 4700,
+            ["WhiteScreen"] = false,
+            ["FPSBoots"] = false,
+        },            
+        ["Webhook"] = {
+            ["Enabled"] = false,
+            ["Url"] = ""
+        }
+}
+loadstring(game:HttpGet("https://pandadevelopment.net/virtual/file/09eeb45f4cc3ad5a"))()
+      		print("button pressed")
+  	end    
+})
+
+Tab.s3:AddButton({
+	Name = "Teddy Hop Boss Script",
+	Callback = function()
+		repeat task.wait() until game:IsLoaded() and game:GetService("Players") and game.Players.LocalPlayer and game.Players.LocalPlayer:FindFirstChild("PlayerGui")
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Teddyseetink/Haidepzai/refs/heads/main/TEDDYHUB-FREEMIUM"))()
+      		print("button pressed")
+  	end    
+})
+
+
+
+
+-----------------------------------------------------end---------------------------------------------------
 Tab:AddParagraph("Paragraph","Paragraph Content")
 
 OrionLib:Init()
