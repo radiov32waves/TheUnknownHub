@@ -63,7 +63,7 @@ function LoadScript()
     ----------------- 99NIGHTS -----------------
 	Tab.s4:AddSection({Name = "99Nght"})
     Tab.s4:AddButton({Name = "VapeVoidware Script", Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/VapeVoidware/VW-Add/main/loader.lua", true))() end})
-    Tab.s5:AddParagraph("Even more is on the way!",":)")
+    Tab.s4:AddParagraph("Even more is on the way!",":)")
 
 
     ----------------- SETTINGS & ANTI-AFK -----------------
