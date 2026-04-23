@@ -1,6 +1,6 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/jensonhirst/Orion/main/source')))()
 
--- 1. KEY SETTINGS
+-- 1. YOUR KEY LIST
 local ValidKeys = {
     "9999",
     "8F2R7K9A1Q", "3M5V6N8X2P", "9L1B4C7Z6W", "2S9XPBUI5Z",
@@ -10,7 +10,7 @@ local ValidKeys = {
 
 local EnteredKey = ""
 
--- 2. MAIN HUB FUNCTION (YOUR ORIGINAL SCRIPT)
+-- 2. MAIN HUB FUNCTION
 function LoadScript()
     local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/jensonhirst/Orion/main/source')))()
     local Window = OrionLib:MakeWindow({
@@ -20,18 +20,12 @@ function LoadScript()
         ConfigFolder = "OrionTest"
     })
 
-    OrionLib:MakeNotification({
-        Name = "Success!",
-        Content = "Welcome to ZorvexBH Hub",
-        Image = "rbxassetid://4483345998",
-        Time = 10
-    })
-
     local Tab = {
         Main = Window:MakeTab({Name = "Main", Icon = "rbxassetid://4483345998"}),
         s1 = Window:MakeTab({Name = "Adoptme", Icon = "rbxassetid://4483345998"}),
         s2 = Window:MakeTab({Name = "Greenville", Icon = "rbxassetid://4483345998"}),
         s3 = Window:MakeTab({Name = "BloxFruit", Icon = "rbxassetid://4483345998"}),
+        Settings = Window:MakeTab({Name = "Settings", Icon = "rbxassetid://4483345998"})
     }
 
     ----------------- MAIN -----------------
@@ -64,6 +58,38 @@ function LoadScript()
     Tab.s3:AddButton({Name = "Auto Bounty Script", Callback = function() loadstring(game:HttpGet("https://pandadevelopment.net/virtual/file/09eeb45f4cc3ad5a"))() end})
     Tab.s3:AddButton({Name = "Teddy Hub Boss", Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/Teddyseetink/Haidepzai/refs/heads/main/TEDDYHUB-FREEMIUM"))() end})
     Tab.s3:AddButton({Name = "BlueXHub Script", Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/Dev-BlueX/BlueX-Hub/refs/heads/main/Main.lua"))() end})
+
+    ----------------- SETTINGS & ANTI-AFK -----------------
+    Tab.Settings:AddSection({Name = "Hub Settings"})
+    
+    _G.AntiAFK = false
+    Tab.Settings:AddToggle({
+        Name = "Anti-AFK",
+        Default = false,
+        Callback = function(Value)
+            _G.AntiAFK = Value
+            if _G.AntiAFK then
+                local GC = getconnections or get_signal_cons
+                if GC then
+                    for i,v in pairs(GC(game.Players.LocalPlayer.Idled)) do
+                        if v.Disable then v:Disable() elseif v.Disconnect then v:Disconnect() end
+                    end
+                else
+                    game.Players.LocalPlayer.Idled:Connect(function()
+                        local VirtualUser = game:GetService("VirtualUser")
+                        VirtualUser:CaptureController()
+                        VirtualUser:ClickButton2(Vector2.new())
+                    end)
+                end
+                OrionLib:MakeNotification({Name = "Anti-AFK", Content = "Enabled", Time = 3})
+            end
+        end
+    })
+
+    Tab.Settings:AddButton({
+        Name = "Destroy UI",
+        Callback = function() OrionLib:Destroy() end
+    })
 
     OrionLib:Init()
 end
