@@ -45,6 +45,8 @@ function LoadScript()
     Tab.s1:AddButton({Name = "TbiGui Script", Callback = function() loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/c29af06acdb7a80fb239415fd322efe9.lua"))() end})
     Tab.s1:AddButton({Name = "Clone House Script", Callback = function() loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/051b9ab9e55bc6acf1ead9319bd606ec.lua"))() end})
     Tab.s1:AddButton({Name = "Free Script", Callback = function() loadstring(game:HttpGet("https://api.luarmor.net/files/v4/loaders/4a873606f2053bf3067ad6da43b5baee.lua"))() end})
+    Tab.s1:AddButton({Name = "Ragesploit Script", Callback = function() loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/875033288c5e99d576622aced60a0c44.lua"))() end})
+
 
     ----------------- GREENVILLE -----------------
     Tab.s2:AddSection({Name = "Greenville"})
@@ -59,6 +61,7 @@ function LoadScript()
     Tab.s3:AddButton({Name = "Auto Bounty Script", Callback = function() loadstring(game:HttpGet("https://pandadevelopment.net/virtual/file/09eeb45f4cc3ad5a"))() end})
     Tab.s3:AddButton({Name = "Teddy Hub Boss", Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/Teddyseetink/Haidepzai/refs/heads/main/TEDDYHUB-FREEMIUM"))() end})
     Tab.s3:AddButton({Name = "BlueXHub Script", Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/Dev-BlueX/BlueX-Hub/refs/heads/main/Main.lua"))() end})
+
 
     ----------------- 99NIGHTS -----------------
 	Tab.s4:AddSection({Name = "99Nght"})
