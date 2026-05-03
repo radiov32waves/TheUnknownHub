@@ -110,13 +110,20 @@ Even more scripts are being added soon, stay tuned!
     })
 
 SettingsTab:AddButton({
-    Name = "Destroy Script",
+    Name = "Destroy All Scripts",
     Callback = function()
-        -- Removes the UI from the screen
-        Window:Destroy() 
+        -- 1. Signals all loops to stop
+        _G.LucasHubRunning = false 
         
-        -- Optional: Clears the script from memory
-        script:Destroy() 
+        -- 2. Finds and deletes the UI folder
+        -- If your UI variable is 'Window', use Window:Destroy()
+        -- Otherwise, this looks for the folder by name:
+        local UI = game:GetService("CoreGui"):FindFirstChild("LucasHub") or 
+                   game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("LucasHub")
+        
+        if UI then
+            UI:Destroy()
+        end
     end
 })
 
