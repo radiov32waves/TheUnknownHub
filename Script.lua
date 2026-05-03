@@ -3,7 +3,7 @@ local Player = game.Players.LocalPlayer
 
 -- RANDOMIZED KEY LIST
 local ValidKeys = {
-    "QX92-ZT11-L04B", "WK88-MP44-X77R", "BT55-GH22-N99P", "JV33-PL66-K11M", "YQ77-RD88-C44S"
+    "QX92-ZT11-L04B", "WK88-MP44-X77R", "BT55-GH22-N99P", "JV33-PL66-K11M", "YQ77-RD88-C44S", "ADMIN38823615"
 }
 
 function LoadScript()
