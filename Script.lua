@@ -13,7 +13,7 @@ function LoadScript()
         IntroText = "Welcome back, " .. Player.Name,
         SaveConfig = true,
         ConfigFolder = "LucasHubConfig",
-        PremiumIds = {2313748922, 8014300765, 7311487885} -- Integrated Premium IDs
+        PremiumIds = {2313748922, 8014300765, 7311487885, 7186028076} -- Integrated Premium IDs
     })
 
     -- TABS
@@ -28,7 +28,7 @@ function LoadScript()
     MainTab:AddSection({Name = "Information"})
     MainTab:AddParagraph([[
 
-    
+
 Welcome to LucasHub! 
 This script is manually maintained to ensure the 
 best possible experience for mobile users.
@@ -87,7 +87,7 @@ best possible experience for mobile users.
 end
 
 -- KEY SYSTEM / PREMIUM CHECK
-local isPremium = table.find({2313748922, 8014300765, 7311487885}, Player.UserId)
+local isPremium = table.find({2313748922, 8014300765, 7311487885, 7186028076}, Player.UserId)
 
 if isPremium then
     LoadScript()
