@@ -32,6 +32,18 @@ function LoadScript()
 Welcome to LucasHub, glad you're here! We keep things 
 running smooth for mobile, so hope you like the scripts.
 ]])
+  MainTab:AddParagraph([[
+
+
+Please note that some of our scripts might stop working.
+Join our Discord and tell me so I can fix them for you!
+]])
+  MainTab:AddParagraph([[
+
+
+Want your favorite script added to our official LucasHub? 
+Just let me know in the Discord suggestions channel!
+]])
     MainTab:AddButton({
         Name = "Copy Discord Link",
         Callback = function()
@@ -42,28 +54,43 @@ running smooth for mobile, so hope you like the scripts.
 
     -- ADOPT ME
     AdoptMeTab:AddSection({Name = "Adopt Me Scripts"})
-    AdoptMeTab:AddButton({Name = "TbiGui Script", Callback = function() loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/c29af06acdb7a80fb239415fd322efe9.lua"))() end})
-    AdoptMeTab:AddButton({Name = "Clone House Script", Callback = function() loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/051b9ab9e55bc6acf1ead9319bd606ec.lua"))() end})
-    AdoptMeTab:AddButton({Name = "Ragesploit Script", Callback = function() loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/875033288c5e99d576622aced60a0c44.lua"))() end})
-    AdoptMeTab:AddButton({Name = "Free Script", Callback = function() loadstring(game:HttpGet("https://api.luarmor.net/files/v4/loaders/4a873606f2053bf3067ad6da43b5baee.lua"))() end})
+    AdoptMeTab:AddButton({Name = "TbiGui Script  (Need-Key)", Callback = function() loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/c29af06acdb7a80fb239415fd322efe9.lua"))() end})
+    AdoptMeTab:AddButton({Name = "Clone House Script  (Keyless)", Callback = function() loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/051b9ab9e55bc6acf1ead9319bd606ec.lua"))() end})
+    AdoptMeTab:AddButton({Name = "Ragesploit Script  (Need-Key)", Callback = function() loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/875033288c5e99d576622aced60a0c44.lua"))() end})
+    AdoptMeTab:AddButton({Name = "TbiGui Script  (Keyless)", Callback = function() loadstring(game:HttpGet("https://api.luarmor.net/files/v4/loaders/4a873606f2053bf3067ad6da43b5baee.lua"))() end})
 
     -- GREENVILLE
     GreenvilleTab:AddSection({Name = "Greenville Scripts"})
-    GreenvilleTab:AddButton({Name = "Auto Farm", Callback = function() loadstring(game:HttpGet("https://api.xnexus.cc/request/12d2fd60e7a67b48ece6f8fce7167a1d"))() end})
+    GreenvilleTab:AddButton({Name = "Nexus Script  (Need-Key)", Callback = function() loadstring(game:HttpGet("https://api.xnexus.cc/request/12d2fd60e7a67b48ece6f8fce7167a1d"))() end})
+    GreenvilleTab:AddParagraph([[
+
+
+Even more scripts are being added soon, stay tuned!
+]])
 
     -- BLOX FRUIT
     BloxFruitTab:AddSection({Name = "Blox Fruit Scripts"})
-    BloxFruitTab:AddButton({Name = "Redz Hub", Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/tlredz/Scripts/refs/heads/main/main.luau"))({JoinTeam = "Pirates", Translator = true}) end})
-    BloxFruitTab:AddButton({Name = "BlueXHub", Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/Dev-BlueX/BlueX-Hub/refs/heads/main/Main.lua"))() end})
-    BloxFruitTab:AddButton({Name = "GravityHub", Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/Dev-GravityHub/BloxFruit/refs/heads/main/Main.lua"))() end})
-    BloxFruitTab:AddButton({Name = "Kaitun", Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/Dev-GravityHub/BloxFruit/refs/heads/main/Kaitun.lua"))() end})
-    BloxFruitTab:AddButton({Name = "Find Fruit", Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/Dev-GravityHub/BloxFruit/refs/heads/main/FindFruit.lua"))() end})
-    BloxFruitTab:AddButton({Name = "Auto Bounty", Callback = function() loadstring(game:HttpGet("https://pandadevelopment.net/virtual/file/09eeb45f4cc3ad5a"))() end})
-    BloxFruitTab:AddButton({Name = "Teddy Hub Boss", Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/Teddyseetink/Haidepzai/refs/heads/main/TEDDYHUB-FREEMIUM"))() end})
+    BloxFruitTab:AddButton({Name = "Redz Hub  (Not-Working)", Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/tlredz/Scripts/refs/heads/main/main.luau"))({JoinTeam = "Pirates", Translator = true}) end})
+    BloxFruitTab:AddButton({Name = "BlueXHub  (Need-Key)", Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/Dev-BlueX/BlueX-Hub/refs/heads/main/Main.lua"))() end})
+    BloxFruitTab:AddButton({Name = "GravityHub  (Keyless)", Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/Dev-GravityHub/BloxFruit/refs/heads/main/Main.lua"))() end})
+    BloxFruitTab:AddButton({Name = "Kaitun  (Keyless)", Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/Dev-GravityHub/BloxFruit/refs/heads/main/Kaitun.lua"))() end})
+    BloxFruitTab:AddButton({Name = "Find Fruit  (Keyless)", Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/Dev-GravityHub/BloxFruit/refs/heads/main/FindFruit.lua"))() end})
+    BloxFruitTab:AddButton({Name = "Auto Bounty  (Not-Working)", Callback = function() loadstring(game:HttpGet("https://pandadevelopment.net/virtual/file/09eeb45f4cc3ad5a"))() end})
+    BloxFruitTab:AddButton({Name = "Teddy Hub Boss  (Need-Key)", Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/Teddyseetink/Haidepzai/refs/heads/main/TEDDYHUB-FREEMIUM"))() end})
 
     -- 99 NIGHTS
     Night99Tab:AddSection({Name = "99 Night Scripts"})
-    Night99Tab:AddButton({Name = "VapeVoidware", Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/VapeVoidware/VW-Add/main/loader.lua", true))() end})
+    Night99Tab:AddButton({Name = "VapeVoidware  (Keyless)", Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/VapeVoidware/VW-Add/main/loader.lua", true))() end})
+    Night99Tab:AddParagraph([[
+
+
+Even more scripts are being added soon, stay tuned!
+]])
+
+
+
+
+
 
     -- ANTI-AFK
     SettingsTab:AddSection({Name = "Configuration"})
@@ -81,6 +108,14 @@ running smooth for mobile, so hope you like the scripts.
             end)
         end
     })
+
+    SettingsTab:AddButton({
+    Name = "Destroy UI",
+    Callback = function()
+        -- Replace 'Window' or 'Library' with the name of your main variable
+        Library:Destroy() 
+    end
+})
 
     Nova:Init()
 end
