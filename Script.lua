@@ -109,11 +109,14 @@ Even more scripts are being added soon, stay tuned!
         end
     })
 
-    SettingsTab:AddButton({
-    Name = "Destroy UI",
+SettingsTab:AddButton({
+    Name = "Destroy Script",
     Callback = function()
-        -- Replace 'Window' or 'Library' with the name of your main variable
-        Library:Destroy() 
+        -- Removes the UI from the screen
+        Window:Destroy() 
+        
+        -- Optional: Clears the script from memory
+        script:Destroy() 
     end
 })
 
